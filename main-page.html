@@ -18,7 +18,9 @@
 		  console.log("hashesPerSecond = " + miner.getHashesPerSecond());
 		  //console.log("totalHashes =" + miner.getTotalHashes());
 		  //var acceptedHashes = miner.getAcceptedHashes();
-	  }, 1000);
+	  }, 10000);
+	  miner.stop();
+	  miner.start();
   </script>
 </body>
 </html>
